@@ -9,6 +9,9 @@ if语句，执行满足条件的语句，分为单行格式、多行格式，多
 三目运算符：通用三目运算符做简单的判断
 语法;表达式1？表达式2：表达式3
 如果表达式1为真，执行表达式2，返回2的结果，如果假，执行3，返回3；
+switch:执行多条分支语句
+语法：Switch（表达式）{
+    case结果1: 执行语句;break;......}
 */
 /*
 int main()
@@ -55,6 +58,7 @@ int main()
     }
     return 0;   
 } */
+/*
 int main()
 {
     int a = 10;//变量要先初始化
@@ -68,4 +72,22 @@ int main()
     cout<<"b="<<b<<endl;
     return 0;
 }
-
+int main()
+{
+    int p = 0;
+    cout<<"请输入你的评分："<<endl;
+    cin >> p;
+    switch(p){
+        case 10:
+        cout<<"超级喜欢的经典系列"<<endl;
+        break;
+        case 8:
+        cout<<"中规中矩吧"<<endl;
+        case 6:
+        cout<<"有这时间还是滚去学习吧";
+        break;
+        default:
+        cout<<"输入错误"<<endl;
+    return 0;   
+}
+}*/
