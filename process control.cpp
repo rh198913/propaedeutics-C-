@@ -23,3 +23,29 @@ int main()
     system("pause");
     return 0;
 } */
+    //三只小猪称体重：小猪ABC，请分别输入体重，并判断谁最重
+int main()
+{
+    int a = 0;//变量要先初始化
+    int b = 0;
+    int c = 0;
+    cout<<"请输入小猪a的体重是多少"<<endl;
+    cin >>a;
+    cout<<"请输入小猪b的体重是多少"<<endl;
+    cin >>b;
+    cout<<"请输入小猪c的体重是多少"<<endl;
+    cin >>c;
+    if(a>b){
+        if(a>c){
+           cout<<"小猪a的体重最大"<<endl;
+        }else
+            cout<<"小猪c的体重最大"<<endl;
+    }
+    else{
+        if( b>c){
+            cout<<"小猪b的体重最大"<<endl;
+        }else
+           cout<<"小猪c的体重最大"<<endl;
+    }
+    return 0;   
+}
