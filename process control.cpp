@@ -97,6 +97,7 @@ int main()
     return 0;   
 }
 }*/
+/*
 //在屏幕中打印0~9十个数
 {
    int n =0;
@@ -133,7 +134,29 @@ int main()
     }
     cout << "恭喜你，答对了；"<< endl;  
     return 0;
+}*/
+ //水仙花数；是指一个三位数，每个位上的数字三次幂之和等于他本身
+   /*
+int main()
+{
+    int num  = 100;//变量必须要初始化
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    do{
+        a = num %10;
+        b = num /10%10;
+        c = num /100;
+        if(a*a*a + b*b*b + c*c*c == num)
+        {           
+            cout<<"水仙花数是："<< num <<endl;
+        }
+       num++;//这个条件如果写在判断条件内就不成立
+    }while(num < 999);
+    return 0;    
 }
+
+ */
 
 
 
