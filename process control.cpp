@@ -156,6 +156,35 @@ int main()
     return 0;    
 }
  */
+/* int main()
+{
+    int i;
+    for (i = 0;i<10;i++ )
+    {
+       
+        cout<<"打印输出i的值"<<i<<endl;
+    }
+    return 0;
+} */
+//敲桌子，1-100得数，含7，整除7打印敲桌子，其余数字直接打印输出
+int main()
+{
+    int i;
+    for(i = 0;i<=100;i++)
+    {
+        if(i%10==7 || i/10%10==7 || i%7==0)//出现错误在于i/7为可以是1-6
+        {
+            cout << "敲桌子" << endl;
+        }
+        else
+        {
+           cout <<i << endl; 
+        }
+    }
+    return 0;
+}
+
+
 
 
 
