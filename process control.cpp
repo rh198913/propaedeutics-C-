@@ -198,7 +198,18 @@ int main()
     }
     return 0;
 } */
-
+/* //乘法口诀表
+int main()
+{
+    int m= 1;
+    for(int i = 1;i<=9;i++){
+       for(int j = 1;j<=i;j++){
+        m = i*j;       
+       cout<<i<<"*"<<j<<"="<<m <<"  ";
+       }
+       cout<<endl;
+    }
+} */
 
 
 
