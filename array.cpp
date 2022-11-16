@@ -48,6 +48,16 @@ int main()
     cout << max <<endl;
     return 0;
 }
+//数组元素逆序：声明五个数组元素，元素逆置
+int main()
+{
+    int i;
+    int arr[5] = {5,2,9,8,7};
+    for(i=0;i<=4;i++){
+         cout<<arr[4-i]<<endl;
+    }
+    return 0;
+}
 
 
 
