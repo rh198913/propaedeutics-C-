@@ -136,7 +136,7 @@ void swap(int a,int b);
     cout <<"sizeof(int *) = " <<sizeof(int *);//(64位操作符下占八个字节,不论数据类型)
     cout <<"sizeof(char *) = " <<sizeof(char *);
     return 0;
-    } */
+    } 
     int main()
     {
         int a = 0;
@@ -151,4 +151,59 @@ void swap(int a,int b);
         //const int * const = a //双不该
         return 0;
     }
+    *//* int main()
+{
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    cout << " 输出第一个元素："<<arr[0]<<endl;
+    int *p = arr;//arr表示数组首地址
+    cout << "利用指针访问首元素是："<<*p<< endl;
+    p++;
+    cout <<"利用指针访问第二个元素是"<<*p<<endl; 
+    for(int i = 0; i<10;i++){
+        cout << *p <<endl;
+        p++;//指针往后偏移，不断循环输出就可以输出所有元素的值
+    }
+    return 0;
+} */
+/* void swap(int *p,int *p1)
+{
+    int temp = *p;
+    *p = *p1;
+    *p1 = temp;  
+}
+
+int main()    
+ {
+    int a = 8;
+    int b = 2;
+    swap(&a,&b);
+    cout << a << endl;
+    cout << b << endl;
+    return 0;
+ }   */
+ //封装一个函数，利用冒泡排序，实现对整型数组的升序排序
+ void bubble(int *arr ,int len )
+ {   
+    for(int i = 0;i<len-1;i++){
+        for(int j = 0;j<len-i-1;j++){
+            if(arr[j] > arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+ }
+int main()
+{
+    int arr[10] = {11,2,5,9,8,6,33,7,4,1};
+    int len = sizeof(arr)/sizeof(arr[0]);
+    bubble(arr,len);
+       for (int i = 0;i<10;i++){
+           cout<<arr[i]<<endl;
+       }
+    return 0;
+ }
+ 
+
     
