@@ -70,3 +70,94 @@ int main()
 {
     //创建学生的结构体变量
 }
+/* //结构体指针
+struct student {string name;int age;int score;};
+int main()
+{
+    //创建学生的结构体变量
+    struct student a1;//给a1属性赋值，通过.访问结构体变量中的属性
+    a1.name  = "张三";
+    a1.age = 19;
+    a1.score = 100;
+    
+    //通过指着指向结构体变量
+    struct student *p = &a1;
+    //通过指针访问结构体变量中的数据
+    cout<<"姓名 "<<p->name<<" 年龄 "<<p->age<<" 成绩  "<<p->score<<endl; 
+    return 0;
+}
+ */
+/* //结构体嵌套结构体
+struct student {
+        int age;
+        string name;
+        int score;
+    };
+struct teacher{
+    int id;
+    string name;
+    int age;
+    struct student a;   
+};
+int main()
+{
+    //创建老师
+   teacher t;
+   t.id = 100000;
+   t.name = "瑞思拜";
+   t.age = 35;
+   t.a.name = "taylor";
+   t.a.age = 18;
+   t.a.score = 88;
+   cout<<"老师工号 "<<t.id<<" 老师姓名 "<<t.name 
+   <<" 老师年龄 "<< t.age<<" 老师辅导的学生姓名 "<<t.a.name<<endl;       
+}
+ */
+/* //结构体做函数参数
+struct student {
+        int age;
+        string name;
+        int score;
+    };
+//打印学生信息的函数
+//void printstudent1(struct student t)//值传递
+//{
+//  cout <<"子函数姓名："<<t.name <<"年龄"<< t.age<< "成绩"<<t.score<<endl;
+//}
+void printstudent2(struct student *p)//地址传递
+{
+    cout<<"子函数中的姓名："<<p->name<<"年龄"<<p->age<<"成绩"<<p->score<<endl;
+}
+
+
+int main()
+{
+    student t;
+    t.name = "taylor";
+    t.age = 18;   
+    t.score = 100;
+    //printstudent1(t);
+    printstudent2(&t);//如果不想修改主函数的数据，用值传递，反之用地址传递
+    return 0;
+} */
+/* //const应用场景
+struct student {
+    string name;
+    int age;
+    int score;
+ };
+ //将函数中的形参改成指针，可以减少内存空间，只占四个内存，且不会复制新的副本
+ void printstudent(const student *t){
+    //t->age = 150;//加入const，一旦修改就会报错，可以防止误操作
+    cout <<"打印学生姓名 "<<t->name<<" 年龄 "<<t->age<<" 成绩 "<<t->score<<endl;
+ }
+ int main()
+ {
+    struct student t = {"taylor",18,100};
+    printstudent(&t);
+    //cout<<"taylor的年龄是"<<t.age<<endl;//结果把内部年龄也改成150了
+    //通过一个函数来打印结构体变量
+    return 0;
+ }
+ */
+
